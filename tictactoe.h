@@ -97,11 +97,11 @@ __interrupt void Port_2(void)
                    {
 
             setAddr(15,0);
-            writeStringToLCD("X");       //Button 1 ve "X"e basılma durumu
+            writeStringToLCD("X");       //The Condition of pushing 1 and  X button
            a = 3;
                    }
 
-            else if ((P2IN &BIT4)==0)    //Button  1 ve "O" ya basılma durumu
+            else if ((P2IN &BIT4)==0)    ////The Condition of pushing 1 and O button
             {
                 setAddr(15,0);
                 writeStringToLCD("O");
@@ -111,14 +111,14 @@ __interrupt void Port_2(void)
 
         if((P2IN & BIT1)==0) //4
         {
-            if((P2IN & BIT4)==0)        //Button  4 ve "O" ya basılma durumu
+            if((P2IN & BIT4)==0)        ////The Condition of pushing 4 and O button
             {
                 setAddr(15,2);
                 writeStringToLCD("O");
                 b=4;
             }
 
-            else if((P2IN & BIT5)==0)     //Button  4 ve "X"e basılma durumu
+            else if((P2IN & BIT5)==0)     //The Condition of pushing 4 and  X button
             {
                 setAddr(15,2);
                 writeStringToLCD("X");
@@ -128,13 +128,13 @@ __interrupt void Port_2(void)
 
         if((P2IN & BIT2)==0) //7
         {
-            if((P2IN & BIT5)==0)     //Button  7 ve "X"e basılma durumu
+            if((P2IN & BIT5)==0)    //The Condition of pushing 7 and  X button
             {
                 setAddr(15,4);
             writeStringToLCD("X");
                 c=3;
             }
-            else if((P2IN & BIT4)==0)   //Button  7 ve "O" ya basılma durumu
+            else if((P2IN & BIT4)==0)   //The Condition of pushing 7 and  O button
             {
                             setAddr(15,4);
                         writeStringToLCD("O");
@@ -145,7 +145,7 @@ __interrupt void Port_2(void)
         }
         break;
 
-       case 1:              //2. sütun
+       case 1:              //2. column
 
         P1OUT |= BIT2;
         P1OUT &= ~BIT3;
@@ -154,13 +154,13 @@ __interrupt void Port_2(void)
 
         if((P2IN &BIT0)==0) //2
         {
-            if((P2IN & BIT5)==0)          //Button  2 ve "X"e basılma durumu
+            if((P2IN & BIT5)==0)         //The Condition of pushing 2 and  X button
             {
                      setAddr(40,0);
                        writeStringToLCD("X");
                        d = 3;
             }
-            else if((P2IN & BIT4)==0)     //Button  2 ve "O" ya basılma durumu
+            else if((P2IN & BIT4)==0)     //The Condition of pushing 2 and  O button
             {
                      setAddr(40,0);
                        writeStringToLCD("O");
@@ -171,14 +171,14 @@ __interrupt void Port_2(void)
 
         if((P2IN &BIT1)==0) //5
         {
-            if((P2IN & BIT5)==0)  //Button 5 ve "X"e basılma durumu
+            if((P2IN & BIT5)==0)  //The Condition of pushing 5 and  X button
             {
                 setAddr(40,2);
                 writeStringToLCD("X");
                 e=3;
             }
 
-            else if((P2IN & BIT4)==0)   //Button  5 ve "O" ya basılma durumu
+            else if((P2IN & BIT4)==0)   //The Condition of pushing 5 and  O button
             {
                 setAddr(40,2);
                 writeStringToLCD("O");
@@ -189,14 +189,14 @@ __interrupt void Port_2(void)
 
         else if ((P2IN &BIT2)==0) //8
         {
-            if((P2IN & BIT5)==0)  //Button 8 ve "X"e basılma durumu
+            if((P2IN & BIT5)==0)  //The Condition of pushing 8 and  X button
                         {
                             setAddr(40,4);
                             writeStringToLCD("X");
                             f=3;
                         }
 
-                        else if((P2IN & BIT4)==0)   //Button  8 ve "O" ya basılma durumu
+                        else if((P2IN & BIT4)==0)   //The Condition of pushing 8 and  O button
                         {
                             setAddr(40,4);
                             writeStringToLCD("O");
@@ -210,7 +210,7 @@ __interrupt void Port_2(void)
 
 
 
-        case 2: //3.sütun
+        case 2: //3.column
 
         P1OUT |= BIT2;
         P1OUT |= BIT3;
@@ -221,14 +221,14 @@ __interrupt void Port_2(void)
        {
 
 
-           if((P2IN & BIT5)==0)  //Button 3 ve "X"e basılma durumu
+           if((P2IN & BIT5)==0)  //The Condition of pushing 3 and  X button
                                   {
                                      setAddr(65,0);
                                       writeStringToLCD("X");
                                       g=3;
                                   }
 
-                                  else if((P2IN & BIT4)==0)   //Button  3 ve "O" ya basılma durumu
+                                  else if((P2IN & BIT4)==0)  //The Condition of pushing 3 and  O button
                                   {
                                       setAddr(65,0);
                                       writeStringToLCD("O");
@@ -242,14 +242,14 @@ __interrupt void Port_2(void)
        if((P2IN &BIT1)==0)//6
        {
 
-           if((P2IN & BIT5)==0)  //Button 6 ve "X"e basılma durumu
+           if((P2IN & BIT5)==0)  //The Condition of pushing 6 and  X button
                       {
                           setAddr(65,2);
                           writeStringToLCD("X");
                           h=3;
                       }
 
-                      else if((P2IN & BIT4)==0)   //Button  6 ve "O" ya basılma durumu
+                      else if((P2IN & BIT4)==0)   //The Condition of pushing 6 and  O button
                       {
                           setAddr(65,2);
                           writeStringToLCD("O");
@@ -262,14 +262,14 @@ __interrupt void Port_2(void)
        if((P2IN &BIT2)==0)//9
        {
 
-           if((P2IN & BIT5)==0)  //Button 5 ve "X"e basılma durumu
+           if((P2IN & BIT5)==0) //The Condition of pushing 5 and  X button
                       {
                           setAddr(65,4);
                           writeStringToLCD("X");
                           i=3;
                       }
 
-                      else if((P2IN & BIT4)==0)   //Button  5 ve "O" ya basılma durumu
+                      else if((P2IN & BIT4)==0)  //The Condition of pushing 5 and  O button
                       {
                           setAddr(65,4);
                           writeStringToLCD("O");
@@ -284,8 +284,7 @@ __interrupt void Port_2(void)
 
 }}
         }
-void win(void)//kazanan kontrol
-
+void win(void)    //checking the winner
 {
      if (a+b+c==9 | d+e+f==9 | g+h+i==9 | c+e+g==9 | a+e+i==9 | a+d+g==9 | b+e+h==9 | c+f+i==9)
      {
